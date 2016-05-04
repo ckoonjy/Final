@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gC-3W-eYg">
+                                <rect key="frame" x="168" y="328" width="264" height="72"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WUJ-Fe-Sa5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6V-P6-6tp">
+                                <rect key="frame" x="20" y="64" width="560" height="208"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="wxF-55-0US"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="puj-IE-Gwq">
+                                <rect key="frame" x="20" y="280" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.051173062310000003" green="0.77883976060000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Enter U.S. dollars amount">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="agX-Bp-9cm"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4yp-gt-H6o">
+                                <rect key="frame" x="20" y="51" width="560" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Yuan"/>
+                                    <segment title="Euro"/>
+                                    <segment title="Pound"/>
+                                    <segment title="Yen"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="currency:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bhw-c3-8s4"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8W-XR-xNd">
+                                <rect key="frame" x="168" y="436" width="264" height="66"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="nKS-aY-D6W"/>
+                                    <constraint firstAttribute="height" constant="66" id="nVx-Wu-vmJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Share On Twitter"/>
+                                <connections>
+                                    <action selector="shareToTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1Y-i8-fkr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.052817950740306818" green="0.77916033434650456" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="45c-od-Rxd"/>
+                            <constraint firstItem="S8W-XR-xNd" firstAttribute="centerX" secondItem="6gC-3W-eYg" secondAttribute="centerX" id="AOA-Iw-0Wh"/>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="leading" secondItem="puj-IE-Gwq" secondAttribute="leading" id="Agi-e2-ild"/>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="trailing" secondItem="4yp-gt-H6o" secondAttribute="trailing" id="DeK-QM-gYZ"/>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="leading" secondItem="4yp-gt-H6o" secondAttribute="leading" id="FhT-82-aFe"/>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="top" secondItem="4yp-gt-H6o" secondAttribute="bottom" constant="-15" id="ISx-dJ-sRE"/>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="K3d-qz-xqQ"/>
+                            <constraint firstItem="puj-IE-Gwq" firstAttribute="top" secondItem="D6V-P6-6tp" secondAttribute="bottom" constant="8" symbolic="YES" id="OT0-t5-Xe2"/>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Xbr-Vh-X2C"/>
+                            <constraint firstItem="6gC-3W-eYg" firstAttribute="top" secondItem="puj-IE-Gwq" secondAttribute="bottom" constant="48" id="gIQ-nO-aym"/>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="trailing" secondItem="puj-IE-Gwq" secondAttribute="trailing" id="ioU-iK-CQh"/>
+                            <constraint firstItem="D6V-P6-6tp" firstAttribute="centerX" secondItem="6gC-3W-eYg" secondAttribute="centerX" id="x68-4M-ZVj"/>
+                            <constraint firstItem="S8W-XR-xNd" firstAttribute="top" secondItem="6gC-3W-eYg" secondAttribute="bottom" constant="48" id="xGd-Gf-Tj0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="D6V-P6-6tp" id="ax3-YD-4Ov"/>
+                        <outlet property="usdamount" destination="puj-IE-Gwq" id="c5z-sI-Eho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="343"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+</document>
